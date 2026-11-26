@@ -8,21 +8,21 @@ what the weekly quota is charged for.
 <!-- AUTO:START -->
 | Stage | Model calls | ok / failed | Cache hits | Total latency | Mean latency | GPU min (T4) | Cash spent | List-price equivalent |
 |---|---|---|---|---|---|---|---|---|
-| assemble | 54 | 53 / 1 | 0 | 1172 s | 21.7 s | 0.0 | $0.000 | $0.000 |
+| assemble | 66 | 65 / 1 | 0 | 1392 s | 21.1 s | 0.0 | $0.000 | $0.000 |
 | experiment:addis_vs_gemini | 2 | 2 / 0 | 0 | 17 s | 8.5 s | 0.0 | $0.000 | $0.000 |
 | experiment:pronunciation_saq | 4 | 4 / 0 | 0 | 51 s | 12.8 s | 0.0 | $0.000 | $0.000 |
 | experiment:tts_style | 3 | 3 / 0 | 0 | 16 s | 5.3 s | 0.0 | $0.000 | $0.000 |
-| keyframes | 23 | 23 / 0 | 157 | 316 s | 13.7 s | 0.0 | $0.000 | $0.081 |
-| music | 6 | 1 / 5 | 5 | 39939 s | 6656.5 s | 0.0 | $0.000 | $0.000 |
-| narration | 22 | 20 / 2 | 255 | 470 s | 21.4 s | 0.0 | $0.037 | $0.037 |
-| references | 6 | 6 / 0 | 54 | 94 s | 15.7 s | 0.0 | $0.000 | $0.021 |
-| run_all | 1 | 1 / 0 | 0 | 142 s | 142.2 s | 0.0 | $0.000 | $0.000 |
+| keyframes | 31 | 31 / 0 | 229 | 410 s | 13.2 s | 0.0 | $0.000 | $0.108 |
+| music | 6 | 1 / 5 | 9 | 39939 s | 6656.5 s | 0.0 | $0.000 | $0.000 |
+| narration | 22 | 20 / 2 | 327 | 470 s | 21.4 s | 0.0 | $0.037 | $0.037 |
+| references | 7 | 7 / 0 | 77 | 106 s | 15.1 s | 0.0 | $0.000 | $0.025 |
+| run_all | 2 | 2 / 0 | 0 | 363 s | 181.6 s | 0.0 | $0.000 | $0.000 |
 | shots | 2 | 0 / 2 | 0 | 11020 s | 5510.1 s | 0.0 | $0.000 | $0.000 |
 | smoke | 3 | 2 / 1 | 0 | 4 s | 1.5 s | 0.0 | $0.000 | $0.000 |
 
 Kaggle jobs waited **849 minutes** in the GPU queue without ever starting (FAILURES F08–F11); that wait is not GPU time and is excluded above.
 
-**Totals:** 126 model calls, 471 cache hits, 0.0 T4 GPU minutes, $0.037 of Addis AI signup credit, $0 cash. Generated from 597 lines of runs.jsonl.
+**Totals:** 148 model calls, 642 cache hits, 0.0 T4 GPU minutes, $0.037 of Addis AI signup credit, $0 cash. Generated from 790 lines of runs.jsonl.
 <!-- AUTO:END -->
 
 ## Free tiers as I actually found them (25–26 Nov 2026)

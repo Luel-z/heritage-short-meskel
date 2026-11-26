@@ -36,7 +36,7 @@
     },
     {
       "id": "living_room",
-      "prompt": "interior of a warm Ethiopian family living room in the early 2000s, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two old framed portraits on the wall and no other pictures, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, golden window light, empty room",
+      "prompt": "interior of a warm Ethiopian family living room in the early 2000s, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two small framed portraits on the wall, of an elderly Ethiopian couple with dark brown skin, and no other pictures, a thin scattering of fine green grass (ketema) on the polished wooden floorboards: hundreds of very thin, narrow grass blades like threads or pine needles, each blade thinner than a pencil line, lying flat, not wide leaves, not palm fronds, not reeds, floorboards visible between the blades, golden window light, empty room",
       "seed": 2003
     }
   ],
@@ -132,8 +132,8 @@
       ],
       "image_prompt": "close-up of hands mixing fresh minced kitfo with spiced butter on a wooden board in a home kitchen, small bowls of mitmita and ayib cheese, steam and warm light",
       "motion_prompt": "hands slowly mix the kitfo, gentle steam rises, fixed camera",
-      "narration": "ወጣቶቹ ክትፎና ሌሎች ባህላዊ ምግቦችን ያዘጋጁ ነበር።",
-      "subtitle_en": "The young adults prepared kitfo and other traditional dishes.",
+      "narration": "ወጣቶቹ ክትፎና ሌሎች ባህላዊ ምግቦችን ሲያዘጋጁ፣",
+      "subtitle_en": "While the young adults prepared kitfo and other dishes,",
       "seed": 1103,
       "motion": "kenburns",
       "kenburns": "zoom_in"
@@ -147,8 +147,8 @@
       ],
       "image_prompt": "Ethiopian children aged six to twelve with dark brown skin playing together in a sunny yard, girls with cornrow braids laughing and running, a boy kicking a small ball, one girl peeking impatiently toward the open kitchen door, candid and joyful, not posed",
       "motion_prompt": "the children laugh and move gently, the camera slowly pans",
-      "narration": "እኛ ልጆች ደግሞ እየተጫወትን እንጠብቅ ነበር።",
-      "subtitle_en": "We children played and waited.",
+      "narration": "እኛ ልጆች እየተጫወትን እንጠብቃለን።",
+      "subtitle_en": "we children played and waited.",
       "seed": 1104,
       "motion": "kenburns",
       "kenburns": "pan_left",
@@ -160,11 +160,10 @@
       "reason": "The reveal of the living room: the place the whole memory lives in, with grass on the wooden floor.",
       "shot_size": "wide",
       "characters": [],
-      "image_prompt": "interior of a warm Ethiopian living room, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two old framed portraits on the wall and no other pictures, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, golden window light, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors",
+      "image_prompt": "interior of a warm Ethiopian living room, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two small framed portraits on the wall, of an elderly Ethiopian couple with dark brown skin, and no other pictures, a thin scattering of fine green grass (ketema) on the polished wooden floorboards: hundreds of very thin, narrow grass blades like threads or pine needles, each blade thinner than a pencil line, lying flat, not wide leaves, not palm fronds, not reeds, floorboards visible between the blades, golden window light, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors",
       "motion_prompt": "the camera slowly glides into the room, dust motes float in the light",
-      "narration": "በመጨረሻም ሁላችንም ለመብላት ሳሎን ውስጥ እንሰበሰብ ነበር። የእንጨቱ ወለል ላይ ቄጠማ ይጎዘጎዝ ነበር።",
-      "subtitle_en": "At last we all gathered in the living room to eat. Grass was spread across the wooden floor.",
-      "narration_take": 2,
+      "narration": "በመጨረሻም ሁላችንም ለመብላት በቄጠማ በተጎዘጎዘው ሳሎን እንሰበሰባለን።",
+      "subtitle_en": "At last we all gathered to eat in the grass-strewn living room.",
       "seed": 1105,
       "motion": "kenburns",
       "kenburns": "zoom_in",
@@ -177,14 +176,16 @@
       "reason": "Close-up of the grandparents' portraits: honours them without showing a generated likeness speaking.",
       "shot_size": "insert",
       "characters": [],
-      "image_prompt": "close-up of two old framed portrait photographs hanging side by side on a warm plastered wall, filling the frame: a black-and-white portrait of a dignified Ethiopian Habesha grandmother in her fifties with brown skin, East African features, dark hair pulled back and a round calm face, wearing a white netela shawl, and a faded colour portrait of an elderly Ethiopian man with dark brown skin, large glasses and a flat cap, soft warm light",
+      "image_prompt": "close-up of two old framed portraits hanging side by side on a warm plastered wall, filling the frame, no room and no furniture visible: on the left a portrait of a dignified Ethiopian Habesha grandmother in her fifties with brown skin, East African features, dark hair pulled back, a round calm face and a white netela shawl; on the right a portrait of the same elderly man as in the reference image: dark brown skin, brown wool flat cap, large brown-framed round glasses, short white-grey moustache, white cotton gabi around his shoulders, soft warm light",
       "motion_prompt": "very slow push-in toward the portraits, fixed and still",
-      "narration": "በግድግዳው ላይ የአያቶቼ ፎቶዎች ተሰቅለው ነበር።",
-      "subtitle_en": "Pictures of my grandparents hung on the walls.",
+      "narration": "ከጨዋታው መልስ ስንገባ ግድግዳው ላይ የአያቶቼ ፎቶዎችን እናያለን።",
+      "subtitle_en": "Coming in from play, we saw my grandparents' photos on the wall.",
       "seed": 1106,
       "motion": "kenburns",
       "kenburns": "pan_right",
-      "refs": []
+      "refs": [
+        "shot:s09"
+      ]
     },
     {
       "id": "s07",
@@ -194,9 +195,9 @@
         "cousins",
         "young_adults"
       ],
-      "image_prompt": "Ethiopian children sitting around the rectangular wooden dining table at the side of the room with plates of food, while young adults in white habesha clothes sit on the sofas around the low round centre table and on small carved wooden duka stools, one elderly grandfather wrapped in a white gabi on the largest sofa, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, laughter",
+      "image_prompt": "Ethiopian Habesha children with dark brown skin and East African features, girls with cornrow braids, boys with very short black hair, sitting around the rectangular wooden dining table at the side of the room with plates of food, while young adults in white habesha clothes sit on the sofas around the low round centre table and on small carved wooden duka stools, one elderly grandfather wrapped in a white gabi on the largest sofa, a thin scattering of fine green grass (ketema) on the polished wooden floorboards: hundreds of very thin, narrow grass blades like threads or pine needles, each blade thinner than a pencil line, lying flat, not wide leaves, not palm fronds, not reeds, floorboards visible between the blades, laughter, only two small framed portraits on the wall, of an elderly Ethiopian couple with dark brown skin",
       "motion_prompt": "people talk and laugh softly, the camera pans slowly across the room",
-      "narration": "እኛ ልጆች በምግብ ጠረጴዛው ዙሪያ፣ ትልልቆቹ ደግሞ በሶፋና በዱካ ላይ ይቀመጡ ነበር።",
+      "narration": "እኛ ልጆች በምግብ ጠረጴዛው ዙሪያ፣ ትልልቆቹ ደግሞ በሶፋና በዱካ ላይ እንቀመጣለን።",
       "subtitle_en": "We children sat at the table; the adults on the sofas and duka stools.",
       "seed": 1107,
       "motion": "kenburns",
@@ -212,7 +213,7 @@
       "reason": "The coffee ceremony: the warmest, most recognisable ritual; the emotional peak.",
       "shot_size": "close_up",
       "characters": [],
-      "image_prompt": "traditional Ethiopian coffee ceremony on loose cut green grass strands laid on a wooden floor: an Ethiopian jebena: a black clay coffee pot with a perfectly spherical round bottom, a long narrow upright neck rising from the top of the sphere, a curved clay handle joining the neck to the body, a thin spout coming out where the neck meets the sphere, and a small woven straw stopper in the opening of the neck, not a teapot, no lid pouring coffee into small white cups on a wooden rekebot tray, thick fragrant frankincense smoke curling from a small clay burner and drifting through the room, roasted beans, warm glow",
+      "image_prompt": "traditional Ethiopian coffee ceremony on fine, very thin green grass blades like threads scattered on a wooden floor, not wide leaves: an Ethiopian jebena: a black clay coffee pot with a perfectly spherical round bottom, a long narrow upright neck rising from the top of the sphere, a curved clay handle joining the neck to the body, a thin spout coming out where the neck meets the sphere, and a small woven straw stopper in the opening of the neck, not a teapot, no lid pouring coffee into small white cups on a wooden rekebot tray, thick fragrant frankincense smoke curling from a small clay burner and drifting through the room, roasted beans, warm glow",
       "motion_prompt": "coffee pours slowly from the jebena, incense smoke curls upward, fixed camera",
       "narration": "የእጣኑ ሽታ ከቡናው ጋር ተቀላቅሎ፣ ክፍሉን በሙቀት፣ በሳቅና በቤተሰብ ፍቅር ይሞላው ነበር።",
       "subtitle_en": "Incense and coffee filled the room with warmth, laughter and family.",
@@ -251,12 +252,12 @@
         "young_adults",
         "grandfather"
       ],
-      "image_prompt": "a warm Ethiopian living room seen from the doorway at dusk, the family gathered together on the sofas around the low round centre table, a single elderly grandfather (only one old man in the room) wrapped in a white gabi on the largest sofa, coffee cups, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, soft lamp light, nostalgic and peaceful, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors",
+      "image_prompt": "a warm Ethiopian living room seen from the doorway at dusk, the family gathered together on the sofas around the low round centre table: Ethiopian Habesha children with dark brown skin and East African features, children with curly black hair, girls with cornrow braids, and young adults in their twenties without hats, a single elderly grandfather (only one old man in the room, and he is the only person wearing a cap) wrapped in a white gabi on the largest sofa in the exact centre of the picture, coffee cups, a thin scattering of fine green grass (ketema) on the polished wooden floorboards: hundreds of very thin, narrow grass blades like threads or pine needles, each blade thinner than a pencil line, lying flat, not wide leaves, not palm fronds, not reeds, floorboards visible between the blades, soft lamp light, nostalgic and peaceful, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors, only two small framed portraits on the wall, of an elderly Ethiopian couple with dark brown skin",
       "motion_prompt": "the camera slowly pulls back out of the doorway, the light gently dims",
       "narration": "ያ ቤት፣ ያ መስቀል፣ ያ ሳቅ… ዛሬም ከእኔ ጋር ነው።",
       "subtitle_en": "That house, that Meskel, that laughter… are still with me today.",
       "min_duration_s": 6,
-      "seed": 1110,
+      "seed": 1510,
       "motion": "kenburns",
       "kenburns": "zoom_out",
       "refs": [

@@ -123,6 +123,60 @@ Each entry: hypothesis → change → result → decision. Every call is in `run
 - **Decision:** Ship the composed score (`music.engine = "composed"`); keep the ACE-Step stage in the
   code for when a GPU is available (`make film-gpu`).
 
+## E11 — Fixing what the golden reference carried along (grass, children, portraits)
+
+- **Hypothesis:** My own review of the near-final cut found three problems: the Meskel grass (ቄጠማ)
+  looked like wide leaves; the children at the dining table (s07) did not look Ethiopian; and the walls
+  showed 4–9 European-looking portraits, with the grandfather's portrait (s06) not matching the
+  grandfather on the sofa (s09). The portraits come from the locked s09 image, which s07/s10 use as a
+  reference (E04: conditioning copies layout). Describing the grass by its *shape*, putting the
+  children's appearance inside the shot prompt (not only in the appended character list), naming the
+  two portraits, and giving s06 the approved s09 image as its reference should fix all three.
+- **Change:** grass text → "hundreds of very thin, narrow grass blades like threads or pine needles…
+  not wide leaves, not palm fronds, not reeds" in the living-room reference, s05, s07, s08, s10;
+  s07/s10 prompts name the children's skin, features and hair; walls → "only two small framed
+  portraits… of an elderly Ethiopian couple"; s06 `refs: ["shot:s09"]` with the grandfather's cap,
+  glasses, moustache and gabi spelled out. Contact sheet: `outputs/round3_fixes.jpg`.
+- **Result:** One run regenerated exactly the 6 affected images (living-room reference, s05–s08, s10;
+  everything else was a cache hit). Grass is now fine blades; walls show two portraits; s07 children
+  read as Ethiopian; the s06 portrait now matches the s09 grandfather. s10 regressed: a second older
+  man in a cap appeared again (the E08 duplicate).
+- **Decision:** Keep the new prompts. Lesson: a golden reference fixes identity but also carries its
+  flaws (the wall of portraits) into every shot that uses it, so the prompt has to override them.
+
+## E12 — Seed search for s10 instead of more prompt text
+
+- **Hypothesis:** After E11, s10 still showed two older men. Adding "he is the only person wearing a
+  cap" and naming the children should help; if the prompt is right, a different seed may give a
+  clean composition faster than more rewording.
+- **Change:** Tightened prompt, then seeds 1110 → 1210 → 1310 (Appendix B: limit attempts per shot).
+  Comparison: `outputs/s10_seeds.jpg`.
+- **Result:** 1110 (new prompt): no grandfather at all. 1210: no grandfather, mixed-looking family.
+  1310: one grandfather matching s09 (cap, glasses, white gabi), the family on the sofas, thin grass,
+  two portraits. One younger man still wears an embroidered cap.
+- **Decision (first round):** Keep seed 1310.
+- **Second round:** Watching the vertical export showed the problem a square contact sheet hides: in
+  1310 the grandfather sits at the right edge, so the 9:16 centre crop cut him out and left only the
+  children, who looked East Asian at that size. Added "on the largest sofa in the exact centre of the
+  picture" and "children with curly black hair", then seeds 1310–1610, previewed with the 9:16 crop
+  drawn on each (`outputs/s10_seeds2.jpg`). Seed 1510: grandfather centred inside the crop, children
+  with curly hair and dark brown skin. Kept 1510.
+- **Lesson:** Judge keyframes through the crop they will be shown in, not as squares.
+
+## E13 — Varying the narration's verb endings (ነበር)
+
+- **Hypothesis:** Eight of nine narration lines ended in ነበር (nine times in all), which sounds
+  repetitive and may lose the listener. Joining shots into one sentence and using the habitual
+  present will keep the memory's past setting (s01–s02 still use ነበር) with more variety.
+- **Change:** I rewrote s03–s07 myself: s03 ends in ሲያዘጋጁ፣ and runs into s04 (እንጠብቃለን), s05
+  merges the gathering and the grass into one sentence, s06 becomes "ከጨዋታው መልስ ስንገባ ግድግዳው ላይ
+  የአያቶቼ ፎቶዎችን እናያለን።", s07 ends in እንቀመጣለን. Subtitles updated to match. The s05 re-take flag
+  (E07) was removed, since the new text gets a new cache key anyway.
+- **Result:** Exactly five TTS calls (s03–s07, Addis `am-yohanes-calm`); all other lines were cache
+  hits. ነበር now appears three times (s01, s02, s08) instead of nine.
+  By ear: <!-- your impression after listening -->
+- **Decision:** Keep the new lines.
+
 ## E07 — Re-take vs. rewording for a dropped syllable (s05)
 
 - **Hypothesis:** "እንሰበሰብ ነበር" came out as "እሰበሰብ ነበር". TTS output varies between runs (E01), so a
