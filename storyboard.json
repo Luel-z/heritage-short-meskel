@@ -1,0 +1,268 @@
+{
+  "title": "Meskel at Grandfather's House",
+  "language": "am-ET",
+  "audience": "My mother's side of the family: the cousins who were children in that house with me, and relatives now living abroad, watching on their phones (vertical) in a family chat.",
+  "intent": "At the end they should feel warm nostalgia and recognise themselves: 'we were all together in that room'. A reminder of what the family was, and an invitation to gather again.",
+  "style_block": "warm hand-painted illustration, soft gouache texture, gentle film grain, golden late-afternoon light, earthy browns, warm wood and fresh green, Ethiopian home in the early 2000s, nostalgic childhood memory, subject centred in frame, no text, no letters",
+  "image_model": "@cf/black-forest-labs/flux-2-klein-4b",
+  "characters": [
+    {
+      "id": "grandfather",
+      "description": "an elderly Ethiopian Habesha man in his eighties with dark brown skin, thin face, short white-grey moustache, large brown-framed glasses, brown wool flat cap with a thin striped band, a thick handwoven white Ethiopian cotton gabi shawl draped around his shoulders like a blanket, kind eyes"
+    },
+    {
+      "id": "grandmother_portrait",
+      "description": "a black-and-white framed portrait photograph of a dignified Ethiopian woman in her fifties, dark hair pulled back, round calm face, white traditional dress"
+    },
+    {
+      "id": "cousins",
+      "description": "a group of five Ethiopian Habesha cousins aged six to twelve, all with dark brown skin and East African features, girls with neat cornrow braids, boys with very short black hair, everyday clothes in pink, olive green, grey and navy blue, long blue jeans"
+    },
+    {
+      "id": "young_adults",
+      "description": "Ethiopian Habesha women and men in their twenties with brown skin, wearing white traditional habesha clothes with coloured tibeb borders for the holiday"
+    }
+  ],
+  "references": [
+    {
+      "id": "grandfather",
+      "prompt": "character reference sheet, the same man shown twice side by side, front view and three-quarter view, upper body: an elderly Ethiopian Habesha man in his eighties with dark brown skin, thin face, short white-grey moustache, large brown-framed glasses, brown wool flat cap with a thin striped band, a thick handwoven white Ethiopian cotton gabi shawl with a thin coloured border draped loosely around his shoulders like a blanket, kind eyes, plain warm beige background",
+      "seed": 2001
+    },
+    {
+      "id": "cousins",
+      "prompt": "character reference sheet: exactly five Ethiopian Habesha cousins aged six to twelve standing in a row, all five with dark brown skin and East African features, three girls with neat cornrow braids and two boys with very short black hair, simple everyday clothes in pink, olive green, grey and navy blue, all wearing long blue jeans, friendly faces, plain warm beige background",
+      "seed": 2002
+    },
+    {
+      "id": "living_room",
+      "prompt": "interior of a warm Ethiopian family living room in the early 2000s, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two old framed portraits on the wall and no other pictures, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, golden window light, empty room",
+      "seed": 2003
+    }
+  ],
+  "voice": {
+    "provider": "addis",
+    "model": "addis-voices-2",
+    "voice_name": "am-yohanes-calm",
+    "fallbacks": [
+      {
+        "provider": "gemini",
+        "model": "gemini-3.8-flash-tts",
+        "voice_name": "Sulafat",
+        "style": ""
+      },
+      {
+        "provider": "gemini",
+        "model": "gemini-3.8-flash-lite-tts",
+        "voice_name": "Sulafat",
+        "style": ""
+      }
+    ]
+  },
+  "music": {
+    "caption": "instrumental, gentle Ethiopian folk lullaby, solo krar and soft masenqo, light hand drum, warm and nostalgic, sparse texture, no lead vocals, intimate room recording",
+    "engine": "composed",
+    "seed": 301,
+    "scale": [
+      "C",
+      "D",
+      "Eb",
+      "G",
+      "Ab"
+    ],
+    "bpm": 72,
+    "key": "C minor",
+    "chosen": null,
+    "cues": [
+      {
+        "at_shot": "s01",
+        "note": "Soft krar enters alone: memory opening."
+      },
+      {
+        "at_shot": "s05",
+        "note": "Fuller texture as the family gathers in the living room."
+      },
+      {
+        "at_shot": "s08",
+        "note": "Warmest point under the coffee ceremony."
+      },
+      {
+        "at_shot": "s10",
+        "note": "Thin back to solo krar and resolve into the end card."
+      }
+    ]
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "reason": "Establishing shot: tells the audience where and when, the grandfather's house on Meskel day.",
+      "shot_size": "extreme_wide",
+      "characters": [],
+      "image_prompt": "exterior of an Addis Ababa family house with a lime-green plastered wall, a white wrought-iron front door with a scrolled metal grille over dark glass, a white wrought-iron pergola over the entrance covered by a climbing vine with clusters of orange trumpet flowers, short entrance steps of speckled beige terrazzo tiles with white curly wrought-iron railings, and a side wall clad in multicoloured rectangular stone tiles in grey, rose and slate, yellow Meskel daisies (adey abeba) in the small garden in front, afternoon sun, a few relatives in white habesha clothes arriving",
+      "motion_prompt": "the camera slowly pushes in toward the house, yellow flowers sway gently in the breeze",
+      "narration": "ልጅ እያለሁ፣ ስድስት ወይም ሰባት ዓመቴ ገደማ፣ መስቀል ከዓመቱ ልዩ በዓላት አንዱ ነበር።",
+      "subtitle_en": "When I was six or seven, Meskel was one of the most special times of the year.",
+      "seed": 1101,
+      "motion": "kenburns",
+      "kenburns": "zoom_in"
+    },
+    {
+      "id": "s02",
+      "reason": "Introduces the family arriving with their children: the gathering is the heart of the story.",
+      "shot_size": "wide",
+      "characters": [
+        "cousins",
+        "young_adults"
+      ],
+      "image_prompt": "in front of an Addis Ababa family house with a lime-green plastered wall, a white wrought-iron front door with a scrolled metal grille over dark glass, a white wrought-iron pergola over the entrance covered by a climbing vine with clusters of orange trumpet flowers, short entrance steps of speckled beige terrazzo tiles with white curly wrought-iron railings, and a side wall clad in multicoloured rectangular stone tiles in grey, rose and slate, Ethiopian Habesha parents with brown skin in white habesha clothes holding the hands of small children walking up the terrazzo steps, cousins with braided hair running ahead to the white iron door, yellow Meskel daisies",
+      "motion_prompt": "children run forward happily, the camera stays fixed",
+      "narration": "የእናቴ ቤተሰቦች ልጆቻቸውን ይዘው በአያቴ ቤት ይሰበሰቡ ነበር።",
+      "subtitle_en": "My mother's family would gather at my grandfather's house, bringing their children.",
+      "seed": 1102,
+      "motion": "kenburns",
+      "kenburns": "pan_right",
+      "refs": []
+    },
+    {
+      "id": "s03",
+      "reason": "The food being prepared: kitfo is a sensory anchor every relative will recognise.",
+      "shot_size": "close_up",
+      "characters": [
+        "young_adults"
+      ],
+      "image_prompt": "close-up of hands mixing fresh minced kitfo with spiced butter on a wooden board in a home kitchen, small bowls of mitmita and ayib cheese, steam and warm light",
+      "motion_prompt": "hands slowly mix the kitfo, gentle steam rises, fixed camera",
+      "narration": "ወጣቶቹ ክትፎና ሌሎች ባህላዊ ምግቦችን ያዘጋጁ ነበር።",
+      "subtitle_en": "The young adults prepared kitfo and other traditional dishes.",
+      "seed": 1103,
+      "motion": "kenburns",
+      "kenburns": "zoom_in"
+    },
+    {
+      "id": "s04",
+      "reason": "The children's point of view: playing and waiting, the narrator's own memory.",
+      "shot_size": "medium",
+      "characters": [
+        "cousins"
+      ],
+      "image_prompt": "Ethiopian children aged six to twelve with dark brown skin playing together in a sunny yard, girls with cornrow braids laughing and running, a boy kicking a small ball, one girl peeking impatiently toward the open kitchen door, candid and joyful, not posed",
+      "motion_prompt": "the children laugh and move gently, the camera slowly pans",
+      "narration": "እኛ ልጆች ደግሞ እየተጫወትን እንጠብቅ ነበር።",
+      "subtitle_en": "We children played and waited.",
+      "seed": 1104,
+      "motion": "kenburns",
+      "kenburns": "pan_left",
+      "refs": [],
+      "min_duration_s": 6.5
+    },
+    {
+      "id": "s05",
+      "reason": "The reveal of the living room: the place the whole memory lives in, with grass on the wooden floor.",
+      "shot_size": "wide",
+      "characters": [],
+      "image_prompt": "interior of a warm Ethiopian living room, a large brown sofa and two smaller sofas arranged around a low round wooden centre table in the middle of the room, a separate rectangular wooden dining table with chairs standing off to one side against the wall, small carved wooden duka stools, exactly two old framed portraits on the wall and no other pictures, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, golden window light, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors",
+      "motion_prompt": "the camera slowly glides into the room, dust motes float in the light",
+      "narration": "በመጨረሻም ሁላችንም ለመብላት ሳሎን ውስጥ እንሰበሰብ ነበር። የእንጨቱ ወለል ላይ ቄጠማ ይጎዘጎዝ ነበር።",
+      "subtitle_en": "At last we all gathered in the living room to eat. Grass was spread across the wooden floor.",
+      "narration_take": 2,
+      "seed": 1105,
+      "motion": "kenburns",
+      "kenburns": "zoom_in",
+      "refs": [
+        "living_room"
+      ]
+    },
+    {
+      "id": "s06",
+      "reason": "Close-up of the grandparents' portraits: honours them without showing a generated likeness speaking.",
+      "shot_size": "insert",
+      "characters": [],
+      "image_prompt": "close-up of two old framed portrait photographs hanging side by side on a warm plastered wall, filling the frame: a black-and-white portrait of a dignified Ethiopian Habesha grandmother in her fifties with brown skin, East African features, dark hair pulled back and a round calm face, wearing a white netela shawl, and a faded colour portrait of an elderly Ethiopian man with dark brown skin, large glasses and a flat cap, soft warm light",
+      "motion_prompt": "very slow push-in toward the portraits, fixed and still",
+      "narration": "በግድግዳው ላይ የአያቶቼ ፎቶዎች ተሰቅለው ነበር።",
+      "subtitle_en": "Pictures of my grandparents hung on the walls.",
+      "seed": 1106,
+      "motion": "kenburns",
+      "kenburns": "pan_right",
+      "refs": []
+    },
+    {
+      "id": "s07",
+      "reason": "Who sat where: children at the table, adults on sofas and the duka stools; the family order of the room.",
+      "shot_size": "wide",
+      "characters": [
+        "cousins",
+        "young_adults"
+      ],
+      "image_prompt": "Ethiopian children sitting around the rectangular wooden dining table at the side of the room with plates of food, while young adults in white habesha clothes sit on the sofas around the low round centre table and on small carved wooden duka stools, one elderly grandfather wrapped in a white gabi on the largest sofa, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, laughter",
+      "motion_prompt": "people talk and laugh softly, the camera pans slowly across the room",
+      "narration": "እኛ ልጆች በምግብ ጠረጴዛው ዙሪያ፣ ትልልቆቹ ደግሞ በሶፋና በዱካ ላይ ይቀመጡ ነበር።",
+      "subtitle_en": "We children sat at the table; the adults on the sofas and duka stools.",
+      "seed": 1107,
+      "motion": "kenburns",
+      "kenburns": "pan_right",
+      "refs": [
+        "living_room",
+        "shot:s09"
+      ],
+      "min_duration_s": 10.5
+    },
+    {
+      "id": "s08",
+      "reason": "The coffee ceremony: the warmest, most recognisable ritual; the emotional peak.",
+      "shot_size": "close_up",
+      "characters": [],
+      "image_prompt": "traditional Ethiopian coffee ceremony on loose cut green grass strands laid on a wooden floor: an Ethiopian jebena: a black clay coffee pot with a perfectly spherical round bottom, a long narrow upright neck rising from the top of the sphere, a curved clay handle joining the neck to the body, a thin spout coming out where the neck meets the sphere, and a small woven straw stopper in the opening of the neck, not a teapot, no lid pouring coffee into small white cups on a wooden rekebot tray, thick fragrant frankincense smoke curling from a small clay burner and drifting through the room, roasted beans, warm glow",
+      "motion_prompt": "coffee pours slowly from the jebena, incense smoke curls upward, fixed camera",
+      "narration": "የእጣኑ ሽታ ከቡናው ጋር ተቀላቅሎ፣ ክፍሉን በሙቀት፣ በሳቅና በቤተሰብ ፍቅር ይሞላው ነበር።",
+      "subtitle_en": "Incense and coffee filled the room with warmth, laughter and family.",
+      "seed": 1108,
+      "motion": "kenburns",
+      "kenburns": "zoom_in",
+      "min_duration_s": 10.5
+    },
+    {
+      "id": "s09",
+      "reason": "The grandfather at the centre of his family: a music-only beat to let the feeling land.",
+      "shot_size": "medium_close_up",
+      "characters": [
+        "grandfather"
+      ],
+      "image_prompt": "an elderly Ethiopian man with a white-grey moustache, large brown-framed glasses and a brown wool flat cap, wrapped in a white cotton gabi blanket, sitting on the largest sofa in a warm living room, smiling gently at his family, grass on the wooden floor, soft window light",
+      "motion_prompt": "he smiles softly and nods, the camera is still",
+      "narration": "",
+      "subtitle_en": "",
+      "min_duration_s": 4.0,
+      "seed": 1109,
+      "motion": "kenburns",
+      "kenburns": "zoom_in",
+      "refs": [
+        "grandfather",
+        "living_room"
+      ],
+      "keyframe_lock": "outputs/keyframes/s09_fb99b2f94274.png"
+    },
+    {
+      "id": "s10",
+      "reason": "Closing image: the room seen from the doorway as the memory fades; returns to the present.",
+      "shot_size": "wide",
+      "characters": [
+        "cousins",
+        "young_adults",
+        "grandfather"
+      ],
+      "image_prompt": "a warm Ethiopian living room seen from the doorway at dusk, the family gathered together on the sofas around the low round centre table, a single elderly grandfather (only one old man in the room) wrapped in a white gabi on the largest sofa, coffee cups, loose freshly cut long green grass strands scattered by hand on top of the polished wooden floorboards, the floorboards clearly visible between the strands, the grass lies flat and does not grow from the floor, soft lamp light, nostalgic and peaceful, the floor has only flat scattered grass strands, no flowers anywhere, no plants growing indoors",
+      "motion_prompt": "the camera slowly pulls back out of the doorway, the light gently dims",
+      "narration": "ያ ቤት፣ ያ መስቀል፣ ያ ሳቅ… ዛሬም ከእኔ ጋር ነው።",
+      "subtitle_en": "That house, that Meskel, that laughter… are still with me today.",
+      "min_duration_s": 6,
+      "seed": 1110,
+      "motion": "kenburns",
+      "kenburns": "zoom_out",
+      "refs": [
+        "living_room",
+        "shot:s09"
+      ]
+    }
+  ]
+}

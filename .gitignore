@@ -1,0 +1,16 @@
+# secrets — never commit
+.env
+kaggle.json
+*.token
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# private family photos — reference only, never published or sent to model APIs
+references/private/
+
+# large intermediate files (final films are linked, not committed)
+outputs/**/*.mp4
+!outputs/final/.gitkeep

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heritage Short storyboard",
+  "description": "The contract between every pipeline stage. Each stage reads this file and writes only its own outputs.",
+  "$defs": {
+    "tts": {
+      "type": "object",
+      "required": ["provider", "model", "voice_name"],
+      "properties": {
+        "provider": {"enum": ["addis", "gemini"]},
+        "model": {"type": "string"},
+        "voice_name": {"type": "string"},
+        "style": {"type": "string", "description": "Gemini only: a spoken-style instruction. Leave empty for Amharic (see EXPERIMENTS E01)."}
+      }
+    }
+  },
+  "type": "object",
+  "required": ["title", "language", "audience", "intent", "style_block", "characters", "voice", "music", "shots"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "description": "Narration language, BCP-47 code, e.g. am-ET"},
+    "audience": {"type": "string", "minLength": 10},
+    "intent": {"type": "string", "minLength": 10},
+    "style_block": {"type": "string", "minLength": 10, "description": "Appended to every image prompt to keep the look consistent"},
+    "characters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z_]+$"},
+          "description": {"type": "string", "minLength": 10}
+        }
+      }
+    },
+    "references": {
+      "description": "Reference sheet: generated first, then passed as input images to every keyframe that lists them in shots[].refs",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "prompt", "seed"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z_]+$"},
+          "prompt": {"type": "string", "minLength": 10},
+          "seed": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "voice": {
+      "description": "Main narrator; fallbacks are tried in order when it fails or runs out of quota",
+      "allOf": [{"$ref": "#/$defs/tts"}],
+      "properties": {
+        "provider": true, "model": true, "voice_name": true, "style": true,
+        "fallbacks": {"type": "array", "items": {"$ref": "#/$defs/tts"}}
+      },
+      "additionalProperties": false
+    },
+    "image_model": {"type": "string"},
+    "music": {
+      "type": "object",
+      "required": ["caption", "cues"],
+      "additionalProperties": false,
+      "properties": {
+        "caption": {"type": "string"},
+        "engine": {"enum": ["composed", "acestep"], "description": "composed = pipeline/compose.py (deterministic synthesis); acestep = music.chosen from ACE-Step"},
+        "seed": {"type": "integer", "minimum": 0, "description": "Seed for the composed melody"},
+        "scale": {"type": "array", "items": {"type": "string"}, "description": "Pitch classes for the composed score (Tizita: C D Eb G Ab)"},
+        "bpm": {"type": "integer", "minimum": 40, "maximum": 200},
+        "key": {"type": "string"},
+        "chosen": {"type": ["string", "null"], "description": "Path of the chosen score candidate"},
+        "cues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["at_shot", "note"],
+            "additionalProperties": false,
+            "properties": {
+              "at_shot": {"type": "string"},
+              "note": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "shots": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["id", "reason", "shot_size", "image_prompt", "motion_prompt", "narration", "subtitle_en", "seed", "motion"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^s[0-9]{2}$"},
+          "reason": {"type": "string", "minLength": 10, "description": "Why this shot exists"},
+          "shot_size": {"enum": ["extreme_wide", "wide", "medium", "medium_close_up", "close_up", "insert"]},
+          "characters": {"type": "array", "items": {"type": "string"}},
+          "refs": {"type": "array", "maxItems": 3, "items": {"type": "string"}, "description": "Reference image ids used as conditioning for this keyframe; 'shot:<id>' uses another shot's keyframe (a golden reference)"},
+          "keyframe_lock": {"type": "string", "description": "Path of an approved keyframe; the stage uses it as-is and never regenerates this shot"},
+          "image_prompt": {"type": "string", "minLength": 10},
+          "motion_prompt": {"type": "string"},
+          "narration": {"type": "string", "description": "Narration line in the film's language; may be empty for a music-only beat"},
+          "subtitle_en": {"type": "string"},
+          "narration_take": {"type": "integer", "minimum": 1, "description": "Bump to regenerate this line with the same text (e.g. a mispronounced word)"},
+          "min_duration_s": {"type": "number", "minimum": 2, "maximum": 15, "description": "Floor for the shot length; otherwise set by narration length"},
+          "seed": {"type": "integer", "minimum": 0},
+          "motion": {"enum": ["wan", "kenburns"], "description": "wan = image-to-video on Kaggle; kenburns = slow pan/zoom fallback"},
+          "kenburns": {"enum": ["zoom_in", "zoom_out", "pan_left", "pan_right"]}
+        }
+      }
+    }
+  }
+}

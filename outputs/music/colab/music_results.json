@@ -1,0 +1,26 @@
+{
+  "setup_s": 111.7,
+  "results": [
+    {
+      "seed": 301,
+      "ok": false,
+      "latency_s": 0.0,
+      "file": null,
+      "error": "Model not fully initialized"
+    },
+    {
+      "seed": 302,
+      "ok": false,
+      "latency_s": 0.0,
+      "file": null,
+      "error": "Model not fully initialized"
+    },
+    {
+      "seed": 303,
+      "ok": false,
+      "latency_s": 0.0,
+      "file": null,
+      "error": "Model not fully initialized"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+requests>=2.31
+jsonschema>=4.20
+pillow>=10.0
+kaggle>=1.7
+six
+numpy>=1.26
